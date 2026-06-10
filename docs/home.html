@@ -490,14 +490,14 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="jupyter-book-tutorial">
 <h1>Jupyter Book Tutorial<a class="headerlink" href="#jupyter-book-tutorial" title="Permalink to this headline">#</a></h1>
-<p>(Last updated: May 27, 2025)</p>
+<p>(Last updated: June 10, 2026)</p>
 <p>In this tutorial, we will teach you how to create a Jupyter book and deploy it online.
 This page is written in markdown, which also serves as an example.
 All the content on this website is licensed under a <a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This tutorial only mentions the basics.
-For more advanced usage of Jupyter Book (e.g., using this special content block, editing the configuration file <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, editing the table of content file <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, etc.), check <a class="reference external" href="https://jupyterbook.org/en/stable/content/index.html">the Jupyter Book documentation</a> for more information.</p>
+For more advanced usage of Jupyter Book (e.g., using this special content block, editing the configuration file <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, editing the table of content file <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, etc.), check <a class="reference external" href="https://jupyterbook.org/v1/intro.html">the Jupyter Book documentation</a> for more information. Notice that this tutorial uses Jupyter Book V1.</p>
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EaETjKmXOTo?si=uAeOYk-SXi9tKXkV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <section id="table-of-contents">
@@ -561,7 +561,7 @@ Pick either one of them and follow the instructions on the website to install co
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>If you already have <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed on your machine, you can skip this step. Check your <code class="docutils literal notranslate"><span class="pre">conda</span></code> installation by running the following command:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda --version
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>If <code class="docutils literal notranslate"><span class="pre">conda</span></code> is installed, you should see a printed message with the version number.
@@ -570,10 +570,10 @@ If you installed Jupyter Notebook before, it is highly likely that you already h
 <p>We recommend using miniconda since it is light-weighted, and you can avoid waiting for a long time to install many packages that may not be necessary.
 If you already have the conda environment ready on your machine, you can skip this step.</p>
 <p>For Mac users, you can also install miniconda using the <a class="reference external" href="https://brew.sh/">Homebrew</a> package manager, as documented on <a class="reference external" href="https://formulae.brew.sh/cask/miniconda">this page</a>:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew install --cask miniconda
-<span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;/usr/local/Caskroom/miniconda/base/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
-<span class="nb">echo</span> <span class="s1">&#39;. /usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh&#39;</span> &gt;&gt; ~/.bash_profile
-<span class="nb">source</span> ~/.bash_profile
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>miniconda
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;/usr/local/Caskroom/miniconda/base/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;. /usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<span class="nb">source</span><span class="w"> </span>~/.bash_profile
 </pre></div>
 </div>
 <div class="admonition important">
@@ -593,20 +593,20 @@ One for Mac/Linux users, and another one for Windows users.</p>
 <h3>For Mac and Linux to install Jupyter Book<a class="headerlink" href="#for-mac-and-linux-to-install-jupyter-book" title="Permalink to this headline">#</a></h3>
 <p>Now, create a new conda environment using the command below.
 We need to install Jupyter Book in the conda environment.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda create -n jupyterbook <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>jupyterbook<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
 </pre></div>
 </div>
 <p>After you have the environment ready, activate it.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda activate jupyterbook
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>jupyterbook
 </pre></div>
 </div>
 <p>Finally, install the packages that are needed for building and compiling notebooks.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install -U jupyter-book
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>jupyter-book~<span class="o">=</span><span class="m">0</span>.13.1
 </pre></div>
 </div>
 <p>Check if Jupyter Book is installed correctly using the following command.
 Having no error messages means that Jupyter Book is installed correctly.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book --help
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>--help
 </pre></div>
 </div>
 </section>
@@ -622,13 +622,13 @@ Do not use the Window command prompt, as it is using a different command line sy
 <p>When you open the terminal, you should see a <code class="docutils literal notranslate"><span class="pre">(base)</span></code> text in the terminal, such as below:</p>
 <p><code class="docutils literal notranslate"><span class="pre">(base)</span> <span class="pre">abc&#64;ABC-windows</span> <span class="pre">~</span></code></p>
 <p>If you did not see it, run the following:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda activate
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate
 </pre></div>
 </div>
 <p>The above command should now brings you to the <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment in conda.
 If there is an error message, it is possible that your terminal does not recognize conda yet.
 In this case, run the following:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda init bash
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>init<span class="w"> </span>bash
 </pre></div>
 </div>
 <p><strong>Then, close your Git Bash and re-open it.</strong>
@@ -639,22 +639,22 @@ Now, you should be in the <code class="docutils literal notranslate"><span class
 Make sure that you close the entire terminal program and re-launch it.</p>
 </div>
 <p>Next, create a new conda environment.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda create -n jupyterbook <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>jupyterbook<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
 </pre></div>
 </div>
 <p>After you have the environment ready, activate it.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda activate jupyterbook
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>jupyterbook
 </pre></div>
 </div>
 <p>Then, install Jupyter Book using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code>. Do not use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>, which will likely cause errors.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge jupyter-book
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyter-book
 </pre></div>
 </div>
 <p>This installation may take several minutes, as conda needs to solve the environment.
 So please be patient and wait until it is finished.</p>
 <p>Finally, check if Jupyter Book is installed correctly using the following command.
 Having no error messages means that Jupyter Book is installed correctly.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book --help
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>--help
 </pre></div>
 </div>
 </section>
@@ -664,21 +664,21 @@ Having no error messages means that Jupyter Book is installed correctly.</p>
 <p><a name="s3"></a></p>
 <p>Next, we need to create a new repository to host your website and code using this tutorial as the template.
 Clone our tutorial repository (which downloads the code to your local machine):</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/yenchiah/jupyter-book-template
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yenchiah/jupyter-book-template
 </pre></div>
 </div>
 <p>The cloned tutorial repository has the template files that you need to build your website.
 We are only using the template for reference.</p>
 <p>Next, go into the template folder and delete the old <code class="docutils literal notranslate"><span class="pre">git</span></code> history from the template since we do not need them. For Mac and Linux, run the following commands:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> jupyter-book-template
-rm -rf .git
-<span class="nb">cd</span> ..
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>jupyter-book-template
+rm<span class="w"> </span>-rf<span class="w"> </span>.git
+<span class="nb">cd</span><span class="w"> </span>..
 </pre></div>
 </div>
 <p>For Windows, we recommand using the bash terminal that comes with the git tool. If the above commands do not work, maybe you are running a different terminal system on Windows. Try the following commands instead if the above ones do not work.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> jupyter-book-template
-del .git
-<span class="nb">cd</span> ..
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>jupyter-book-template
+del<span class="w"> </span>.git
+<span class="nb">cd</span><span class="w"> </span>..
 </pre></div>
 </div>
 <p>To have your repository that can host your website and code, <a class="reference external" href="https://github.com/new">create a new repository</a> and work from there.
@@ -686,7 +686,7 @@ Make sure that your repository is public, and do not add a README file.
 You also do not need to add the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file and <code class="docutils literal notranslate"><span class="pre">license</span></code>.</p>
 <p>Then, clone your newly created (and currently empty) repository to your local machine.
 Remember to use the proper account user name (i.e., replacing <code class="docutils literal notranslate"><span class="pre">MY_USER_NAME</span></code>) and repository name (i.e., replacing <code class="docutils literal notranslate"><span class="pre">MY_REPOSITORY_NAME</span></code>) in the URL that you want to clone.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/MY_USER_NAME/MY_REPOSITORY_NAME
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/MY_USER_NAME/MY_REPOSITORY_NAME
 
 <span class="c1"># Below is one example of the URL</span>
 <span class="c1"># https://github.com/abc/example-repo</span>
@@ -694,7 +694,7 @@ Remember to use the proper account user name (i.e., replacing <code class="docut
 </div>
 <p>Now, copy all the template files and folders from the tutorial repository to this newly created repository.
 Again, remember to use the correct repository name (i.e., replacing <code class="docutils literal notranslate"><span class="pre">MY_REPOSITORY_NAME</span></code> to your repository name).</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cp -r jupyter-book-template/* MY_REPOSITORY_NAME/
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>jupyter-book-template/*<span class="w"> </span>MY_REPOSITORY_NAME/
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -708,22 +708,22 @@ Otherwise, you will fail to copy the hidden files, such as the <code class="docu
 <p><a name="s4"></a></p>
 <p>Now we are going to compile and build your book on your local machine.
 Inside your conda environment, we need to install some required Python packages:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install -U numpy
-pip install -U plotly
-pip install -U pandas
-pip install -U matplotlib
-pip install -U seaborn
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>numpy
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>plotly
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pandas
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>matplotlib
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>seaborn
 </pre></div>
 </div>
 <p>To build the book, run the following command.
 Remember that you must go to the repository folder  (i.e., replacing <code class="docutils literal notranslate"><span class="pre">MY_REPOSITORY_NAME</span></code>) that you just cloned.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> MY_REPOSITORY_NAME
-jupyter-book build .
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>MY_REPOSITORY_NAME
+jupyter-book<span class="w"> </span>build<span class="w"> </span>.
 </pre></div>
 </div>
 <p>The above command only builds the newly-updated files since the last time you built the book.
 Sometimes you may want to build the entire book from scratch, and you can use the following:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book build --all .
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>--all<span class="w"> </span>.
 </pre></div>
 </div>
 <p>After building the book, all the html files in the <code class="docutils literal notranslate"><span class="pre">_build/html/</span></code> directory will be updated.
@@ -740,21 +740,21 @@ For more information about how to edit them, check <a class="reference external"
 We will do this using the <a class="reference external" href="https://pages.github.com">GitHub Pages</a>.</p>
 <p>First, go to the repository folder on your computer and use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> to indicate that you want to push these files to the remote GitHub repository.
 Replace <code class="docutils literal notranslate"><span class="pre">MY_REPOSITORY_NAME</span></code> with your repository name.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> MY_REPOSITORY_NAME
-git add .
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>MY_REPOSITORY_NAME
+git<span class="w"> </span>add<span class="w"> </span>.
 </pre></div>
 </div>
 <p>Run the following to check if you add the files.
 You should see green marked messages in the terminal.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git status
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
 </pre></div>
 </div>
 <p>Then, commit the changes that you want to make using a message.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;Add my first book!&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add my first book!&quot;</span>
 </pre></div>
 </div>
 <p>Next, push your code and files on your local machine to your remote repository.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git push
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push
 </pre></div>
 </div>
 <p>The above commands push your code to the main branch.
@@ -763,14 +763,14 @@ If you use the SSH key authentication method, it will not ask you to enter the p
 <p>Next, we need to use the <a class="reference external" href="https://github.com/c-w/ghp-import">ghp-import</a> package to push your website code to a separate branch.
 To use the package, run the following to install it:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># For Mac and Linux users</span>
-pip install -U ghp-import
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>ghp-import
 
 <span class="c1"># For Windows users</span>
-conda install -c conda-forge ghp-import
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>ghp-import
 </pre></div>
 </div>
 <p>Then, run the following command to push your html files to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
 </pre></div>
 </div>
 <p>After this, go to the URL that points to your GitHub repository, click “Settings” -&gt; “Pages” to go to the page settings.
@@ -799,17 +799,17 @@ If you already have an existing notebook, you can replace the original <code cla
 Step 4 will rebuild the book, which means compiling/translating the notebook and markdown files into HTML/CSS/JavaScript files.
 Step 5 will push your new content to the GitHub repository and update the online content of your website.
 We provide the example terminal commands below:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book build --all .
-git status
-git add .
-git status
-git commit -m <span class="s2">&quot;Update my book.&quot;</span>
-git push
-ghp-import -n -p -f _build/html
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>--all<span class="w"> </span>.
+git<span class="w"> </span>status
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>status
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update my book.&quot;</span>
+git<span class="w"> </span>push
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
 </pre></div>
 </div>
 <p>If for some reasons, your changes are not reflected in the newly built website, you can first <a class="reference external" href="https://jupyterbook.org/en/stable/basics/build.html">clean up the content</a> by using the following command, and then run the above commands to build the book again.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book clean .
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>clean<span class="w"> </span>.
 </pre></div>
 </div>
 <p>Every time you build some new files (or updated files), you need to rebuild the book and push new changes to your remote GitHub repository.
@@ -870,7 +870,7 @@ You may be able to find solutions on Stack Overflow or other people’s blogs.</
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./docs"
         },
         predefinedOutput: true

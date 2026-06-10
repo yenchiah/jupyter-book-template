@@ -1,6 +1,6 @@
 # Jupyter Book Tutorial
 
-(Last updated: May 27, 2025)
+(Last updated: June 10, 2026)
 
 In this tutorial, we will teach you how to create a Jupyter book and deploy it online.
 This page is written in markdown, which also serves as an example.
@@ -8,7 +8,7 @@ All the content on this website is licensed under a [Creative Commons Attributio
 
 :::{note}
 This tutorial only mentions the basics.
-For more advanced usage of Jupyter Book (e.g., using this special content block, editing the configuration file `_config.yml`, editing the table of content file `_toc.yml`, etc.), check [the Jupyter Book documentation](https://jupyterbook.org/en/stable/content/index.html) for more information.
+For more advanced usage of Jupyter Book (e.g., using this special content block, editing the configuration file `_config.yml`, editing the table of content file `_toc.yml`, etc.), check [the Jupyter Book documentation](https://jupyterbook.org/v1/intro.html) for more information. Notice that this tutorial uses Jupyter Book V1.
 :::
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EaETjKmXOTo?si=uAeOYk-SXi9tKXkV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -116,7 +116,7 @@ conda activate jupyterbook
 ```
 Finally, install the packages that are needed for building and compiling notebooks.
 ```sh
-pip install -U jupyter-book
+pip install -U jupyter-book~=0.13.1
 ```
 Check if Jupyter Book is installed correctly using the following command.
 Having no error messages means that Jupyter Book is installed correctly.
