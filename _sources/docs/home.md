@@ -108,7 +108,7 @@ One for Mac/Linux users, and another one for Windows users.
 Now, create a new conda environment using the command below.
 We need to install Jupyter Book in the conda environment.
 ```sh
-conda create -n jupyterbook python=3.10
+conda create -n jupyterbook python=3.13
 ```
 After you have the environment ready, activate it.
 ```sh
@@ -116,7 +116,7 @@ conda activate jupyterbook
 ```
 Finally, install the packages that are needed for building and compiling notebooks.
 ```sh
-pip install -U jupyter-book~=0.13.1
+pip install -U "jupyter-book<2"
 ```
 Check if Jupyter Book is installed correctly using the following command.
 Having no error messages means that Jupyter Book is installed correctly.
@@ -158,15 +158,15 @@ Make sure that you close the entire terminal program and re-launch it.
 
 Next, create a new conda environment.
 ```sh
-conda create -n jupyterbook python=3.10
+conda create -n jupyterbook python=3.13
 ```
 After you have the environment ready, activate it.
 ```sh
 conda activate jupyterbook
 ```
-Then, install Jupyter Book using `conda install`. Do not use `pip install`, which will likely cause errors.
+Then, install Jupyter Book using `conda install`.
 ```sh
-conda install -c conda-forge jupyter-book
+conda install -c conda-forge "jupyter-book=1.*"
 ```
 This installation may take several minutes, as conda needs to solve the environment.
 So please be patient and wait until it is finished.
